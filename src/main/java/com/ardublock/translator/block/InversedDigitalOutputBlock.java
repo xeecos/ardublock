@@ -25,7 +25,7 @@ public class InversedDigitalOutputBlock extends DigitalOutputBlock
 			ret = ret + number;
 			ret = ret + " , ";
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-			ret = ret + translatorBlock.toCode();
+			ret = ret + "!(" + translatorBlock.toCode() + ")";
 			ret = ret + " );\n";
 			return ret;
 		}
