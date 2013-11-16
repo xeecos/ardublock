@@ -3840,8 +3840,11 @@
 				<text>Makeblock Stepper Motor</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
-					<DefaultArg genus-name="me_port_1" label="Port 1" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.i2c_number">
+					<DefaultArg genus-name="me_address_0" label="Address 0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.microstep_number">
+					<DefaultArg genus-name="me_microstep_sixteenth" label="Sixteenth" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
 					<DefaultArg genus-name="number" label="10000" />
@@ -4011,6 +4014,188 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="me_address_0" kind="data" color="0 177 236" initlabel="bg.me_i2c_0" editable-label="no">
+			<description>
+				<text>Me I2C Address</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="0" >
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_1" kind="data" color="0 177 236" initlabel="bg.me_i2c_1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="1" >
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_2" kind="data" color="0 177 236" initlabel="bg.me_i2c_2" editable-label="no">
+		
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="2" >
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_3" kind="data" color="0 177 236" initlabel="bg.me_i2c_3" editable-label="no">
+		
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="3" >
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_4" kind="data" color="0 177 236" initlabel="bg.me_i2c_4" editable-label="no">
+			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="4" >
+					<DefaultArg genus-name="number" label="4" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_5" kind="data" color="0 177 236" initlabel="bg.me_i2c_5" editable-label="no">
+		
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="5" >
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_6" kind="data" color="0 177 236" initlabel="bg.me_i2c_6" editable-label="no">
+			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="6" >
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_7" kind="data" color="0 177 236" initlabel="bg.me_i2c_7" editable-label="no">
+		
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="7" >
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_8" kind="data" color="0 177 236" initlabel="bg.me_i2c_8" editable-label="no">
+			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="8" >
+					<DefaultArg genus-name="number" label="8" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_9" kind="data" color="0 177 236" initlabel="bg.me_i2c_9" editable-label="no">
+			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="9" >
+					<DefaultArg genus-name="number" label="9" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_A" kind="data" color="0 177 236" initlabel="bg.me_i2c_A" editable-label="no">
+			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="10" >
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_address_B" kind="data" color="0 177 236" initlabel="bg.me_i2c_B" editable-label="no">
+			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="11" >
+					<DefaultArg genus-name="number" label="11" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_C" kind="data" color="0 177 236" initlabel="bg.me_i2c_C" editable-label="no">
+			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="12" >
+					<DefaultArg genus-name="number" label="12" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_D" kind="data" color="0 177 236" initlabel="bg.me_i2c_D" editable-label="no">
+			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="13" >
+					<DefaultArg genus-name="number" label="13" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_E" kind="data" color="0 177 236" initlabel="bg.me_i2c_E" editable-label="no">
+			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="14" >
+					<DefaultArg genus-name="number" label="14" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="me_address_F" kind="data" color="0 177 236" initlabel="bg.me_i2c_F" editable-label="no">
+		
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="15" >
+					<DefaultArg genus-name="number" label="15" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_microstep_full" kind="data" color="0 177 236" initlabel="bg.me_microstep_full" editable-label="no">
+			<description>
+				<text>Me Stepper Driver MicroStept</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="1">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_microstep_half" kind="data" color="0 177 236" initlabel="bg.me_microstep_half" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="2">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_microstep_quarter" kind="data" color="0 177 236" initlabel="bg.me_microstep_quarter" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="4">
+					<DefaultArg genus-name="number" label="4" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_microstep_eighth" kind="data" color="0 177 236" initlabel="bg.me_microstep_eighth" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="8">
+					<DefaultArg genus-name="number" label="8" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_microstep_sixteenth" kind="data" color="0 177 236" initlabel="bg.me_microstep_sixteenth" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="16">
+					<DefaultArg genus-name="number" label="16" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		<BlockGenus name="me_motor_1" kind="data" color="0 177 236" initlabel="bg.me_motor_1" editable-label="no">
 			<description>
 				<text>Me Base Shield DC Motor Port</text>
@@ -4168,6 +4353,31 @@
 			<FamilyMember>me_port_6</FamilyMember>
 			<FamilyMember>me_port_7</FamilyMember>
 			<FamilyMember>me_port_8</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>me_address_0</FamilyMember>
+			<FamilyMember>me_address_1</FamilyMember>
+			<FamilyMember>me_address_2</FamilyMember>
+			<FamilyMember>me_address_3</FamilyMember>
+			<FamilyMember>me_address_4</FamilyMember>
+			<FamilyMember>me_address_5</FamilyMember>
+			<FamilyMember>me_address_6</FamilyMember>
+			<FamilyMember>me_address_7</FamilyMember>
+			<FamilyMember>me_address_8</FamilyMember>
+			<FamilyMember>me_address_9</FamilyMember>
+			<FamilyMember>me_address_A</FamilyMember>
+			<FamilyMember>me_address_B</FamilyMember>
+			<FamilyMember>me_address_C</FamilyMember>
+			<FamilyMember>me_address_D</FamilyMember>
+			<FamilyMember>me_address_E</FamilyMember>
+			<FamilyMember>me_address_F</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>me_microstep_full</FamilyMember>
+			<FamilyMember>me_microstep_half</FamilyMember>
+			<FamilyMember>me_microstep_quarter</FamilyMember>
+			<FamilyMember>me_microstep_eighth</FamilyMember>
+			<FamilyMember>me_microstep_sixteenth</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>me_motor_1</FamilyMember>

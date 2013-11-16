@@ -15,16 +15,17 @@ public class MeStepperMotor extends TranslatorBlock {
 		translator.addHeaderFile("Makeblock.h");
 		translator.addHeaderFile("SoftwareSerial.h");
 		translator.addHeaderFile("Wire.h");
-		TranslatorBlock portBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeStepperMotor stepper"+portBlock.toCode()+"(PORT_"+portBlock.toCode()+");";
+		TranslatorBlock addressBlock = this.getRequiredTranslatorBlockAtSocket(0);
+		String ret = "MeStepperMotor stepper"+addressBlock.toCode()+"(PORT_1,"+addressBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
-		TranslatorBlock speedBlock = this.getRequiredTranslatorBlockAtSocket(1);
-		TranslatorBlock accelerationBlock = this.getRequiredTranslatorBlockAtSocket(2);
-		translator.addSetupCommand("stepper"+portBlock.toCode()+".begin(STP_SIXTEENTH,"+speedBlock.toCode()+","+accelerationBlock.toCode()+");");
-		TranslatorBlock moveToBlock = this.getRequiredTranslatorBlockAtSocket(3);
-		TranslatorBlock execBlock = getTranslatorBlockAtSocket(4);
-		ret = "stepper"+portBlock.toCode()+".moveTo("+moveToBlock.toCode()+");\n";
-		ret += "int distance = stepper"+portBlock.toCode()+".distanceToGo();\n";     
+		TranslatorBlock microstepBlock = this.getRequiredTranslatorBlockAtSocket(1);
+		TranslatorBlock speedBlock = this.getRequiredTranslatorBlockAtSocket(2);
+		TranslatorBlock accelerationBlock = this.getRequiredTranslatorBlockAtSocket(3);
+		translator.addSetupCommand("stepper"+addressBlock.toCode()+".begin("+microstepBlock.toCode()+","+speedBlock.toCode()+","+accelerationBlock.toCode()+");");
+		TranslatorBlock moveToBlock = this.getRequiredTranslatorBlockAtSocket(4);
+		TranslatorBlock execBlock = getTranslatorBlockAtSocket(5);
+		ret = "stepper"+addressBlock.toCode()+".moveTo("+moveToBlock.toCode()+");\n";
+		ret += "int distance = stepper"+addressBlock.toCode()+".distanceToGo();\n";     
 		ret += "if(distance==0){\n";
 		String exec = "";
 		while (execBlock != null)
